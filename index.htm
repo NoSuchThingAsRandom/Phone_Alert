@@ -1,15 +1,15 @@
-﻿<html>
+<html>
 <head>
     <title>Hello World</title>
 
     <script>
         function start() {
-            createUser("Sam");
+            createUser("Samaiosfhsdioghseofhn");
+            createUser("Micghaeolfsdhioghsdioghasogahs");
             createText("Hello World", false);
             createText("Hey Sam", true);
-            createText("Can always re read them😝 tbf I have a weird thing with only wanting to read paperbacks and I find it difficult to read off a screen, I like holding books in my hand and having them on a shelf😂But yeah that’s fair✌🏻", false);
+            createText("AasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhngAasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhngAasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhngAasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhngAasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhngAasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhngAasdfaifhoasdiotfgfwerhsdklgjsdgujseiogjieriohrysdklghweriohsdklgjasdiktgjfkfjhng", false);
         }
-
         function createText(messaageToDisplay, me) {
             var messageContainer = document.getElementById("container");
             var newMessage = document.createElement("div");
@@ -22,7 +22,6 @@
             var text = document.createElement("p");
             text.innerHTML = messaageToDisplay
             newMessage.appendChild(text);
-
             messageContainer.appendChild(newMessage);
         }
         function createUser(user) {
@@ -30,20 +29,18 @@
             var newUser = document.createElement("div");
             var button = document.createElement("button");
             button.className = "user";
-            button.onclick=buttonPress;
+            button.onclick="buttonPress(button.innerHTML)";
             
-            button.innerHTML = "Sam Ralpasdadahzxyc";
+            button.innerHTML = user;
             newUser.appendChild(button)
             //window.alert("He")
             //newUser.innerHTML(user);
             userContainer.appendChild(button);
             
-
         }
-        function buttonPress() {
-            window.alert("Button");
+        function buttonPress(text) {
+            window.alert("Button: "+text);
         }
-
         window.onload = start;
     </script>
     <style>
@@ -53,7 +50,6 @@
             background-color: dodgerblue;
             height: 7.5%;
         }
-
         nav {
             float: left;
             width:20%;
@@ -71,7 +67,6 @@
             word-break:break-all;
             overflow-y:hidden;
         }
-
         .Messages {
             border-left: 2px solid black;
             background-color: lightgray;
@@ -80,11 +75,10 @@
             height: 62.5%;
             overflow-y: scroll;
         }
-
         .textPerson {
             padding: 10px;
             border-radius: 20px 50px 50px 20px;
-            word-break: normal;
+            word-break: break-all;
             min-width: 20%;
             max-width: 60%;
             min-height: 5%;
@@ -94,11 +88,10 @@
             margin-bottom: 20px;
             background-color: deepskyblue;
         }
-
         .textMe {
             padding: 10px;
             border-radius: 50px 20px 20px 50px;
-            word-break: normal;
+            word-break: break-all;
             min-width: 20%;
             max-width: 60%;
             min-height: 5%;
@@ -109,7 +102,6 @@
             margin-left: auto;
             background-color: deepskyblue;
         }
-
         .textEntry {
             border-left: 2px solid black;
             background-color: mediumpurple;
